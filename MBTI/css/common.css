@@ -1,0 +1,99 @@
+/**모든 페이지에서 공통으로 적용되는 CSS파일이 여기**/
+
+body {
+    font-family: "Pretendard Variable", sans-serif;
+    word-break: keep-all; /**줄바꿈 속성**/
+    padding-top: 80px;
+    padding-bottom: 80px;
+} /**body부분 전체에 이 폰트를 적용한다.**/
+img {
+    display: block;
+}
+.page-title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #13B491;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.page-subtitle {
+    width: 240px;
+    height: 50px;
+    border: 5px solid #FFA32D;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFA32D;
+    margin-left: auto; /**가운데 정렬됨**/ /**margin = 외부 여백을 의미/ 요소 자체의 너비가 정해져 있고 요소의 여백은 margin에 auto값으로 브라우저가 자동으로 지정**/
+    margin-right: auto; /**가운데 정렬됨**/ /**타이틀은 text-align으로 글자 정렬을 한거, 개발자모드로 보면 타이틀은 창전체를 차지하고 있다. 이 두 가지의 정렬 방식이 다르단걸 알 수 있음.**/
+    margin-bottom: 20px;
+}
+.btn {
+    max-width: 500px;
+    height: 100px;
+    display: flex; /**a태그 '본캐찾으러GO!'(글자요소)에 속성을 추가/display태그의 역할:요소가 화면에 보여지는 특성을 지정해주는 역할, 이걸 쓰면 블럭요소와 유사한 요소를 가지게 되서 가로너비와 세로너비를 지정할 수 있게 됨. 이제 정렬도 할 수 있다는 말.**/
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.1s; /**전환효과는 버튼이 눌리기 전 상태에 작성한다. 전체 버튼에 작용하기 때문에 여기에 작성한다**/
+}
+.btn-orange {                   /**오렌지색 버튼의 css내용**/
+    background-color: #FFA32D;
+    box-shadow: 0 14px 0 #E66000;
+    color: #ffffff;
+} 
+.btn-orange:active {
+    box-shadow: 0 4px 0 #E66000;
+    transform: translateY(10px); /**변환 효과/translateY:Y축으로 이동을 만들어줌**/
+}
+.btn-green {
+    background-color: #32BFA1;
+    box-shadow: 0 14px 0 #299A82;
+    color: 
+    #ffffff;
+}
+.btn-green {
+    box-shadow: 0 4px 0 #299A82;
+    transform: translateY(10px);
+}
+.btn-gray {
+    background-color: #F2F4F6;
+    box-shadow: 0 14px 0 #DFE1F2;
+    color: #444444;
+}
+.btn-gray:active {
+    box-shadow: 0 4px 0 #DFE1F2;
+    transform: translateY(10px);
+}
+.btn-small {
+    max-width: 350px;
+    height: 70px;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+/**media query**/
+@media (max-width: 640px) {
+    body {
+        padding-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .page-title {
+        font-size: 40px;
+    }
+    .btn {
+        font-size: 34px;
+    }
+}
